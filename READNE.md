@@ -30,7 +30,10 @@
 
 - Watch 3.6 How CSS is Parsed, Part 2 Value Processing
 - Value Processing
-- Inheritance
-  -
+- ## Inheritance
 
 # Introduction to SASS and NPM
+
+- [SASS example in CodePen Variables and Nesting](https://codepen.io/hudson21/pen/xxVVBgq?editors=1100)
+
+### Command Line
