@@ -4,12 +4,12 @@
   "description": "This is a webpage for Nature Trips",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "sass --watch sass/main.scss css/style.css"
   },
   "author": "Carlos Miguel Hudson Díaz",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.14.1"
-  }
+    "sass": "^1.26.10"
+  },
+  "dependencies": {}
 }

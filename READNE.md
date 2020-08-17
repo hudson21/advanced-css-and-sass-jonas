@@ -37,3 +37,6 @@
 - [SASS example in CodePen Variables and Nesting](https://codepen.io/hudson21/pen/xxVVBgq?editors=1100)
 
 ### Command Line
+
+- live-server: To reload your project when there are new changes
+
