@@ -5,6 +5,9 @@
 
 # Natours Project
 
+- [Icons used on Natours Project](https://linea.io/)
+- For Reference: /linea_complete_1.0/\_basic/\_ICONFONT/icons-reference.html
+
 # How CSS works behind the scenes
 
 ### Three Main Pilars on HTML and CSS
