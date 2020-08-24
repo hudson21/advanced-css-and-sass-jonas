@@ -2,6 +2,7 @@
 
 - [Course Materials and Instructions on Github](https://github.com/jonasschmedtmann/advanced-css-course)
 - [Jonas Resources Page](http://codingheroes.io/resources/)
+- [Free Videos for your Website](https://coverr.co/)
 
 # Natours Project
 
