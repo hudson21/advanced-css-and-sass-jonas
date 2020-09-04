@@ -1,3 +1,24 @@
+/*
+0 - 600px : Phone
+600 - 900px : Tablet portrait
+900 - 1200px : Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone 
+- tab-vertical
+- tab-horizontal
+- big-desktop
+
+Order: 
+1. Base + Typography 
+2. General Layout + Grid 
+3. Page Layout 
+4. Components
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -47,9 +68,30 @@
 html {
   font-size: 62.5%;
 }
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 body {
@@ -58,7 +100,6 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -79,6 +120,12 @@ body {
   /* animation-iteration-count: 3; */
   /* animation-delay: 3s; */
 }
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+}
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -86,6 +133,11 @@ body {
   letter-spacing: 1.75rem;
   /* This is the animation shortcut */
   animation: moveInRight 1s ease-out;
+}
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -99,6 +151,16 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
+}
+@media (max-width: 75em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
 .heading-secondary:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -148,7 +210,6 @@ body {
   /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {
@@ -169,6 +230,12 @@ body {
   /* animation-iteration-count: 3; */
   /* animation-delay: 3s; */
 }
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+  }
+}
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -176,6 +243,11 @@ body {
   letter-spacing: 1.75rem;
   /* This is the animation shortcut */
   animation: moveInRight 1s ease-out;
+}
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 0.5rem;
+  }
 }
 
 .heading-secondary {
@@ -189,6 +261,16 @@ body {
   color: transparent;
   letter-spacing: 0.2rem;
   transition: all 0.2s;
+}
+@media (max-width: 75em) {
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
 .heading-secondary:hover {
   transform: skewY(2deg) skewX(15deg) scale(1.1);
@@ -698,6 +780,16 @@ body {
 .row:not(:last-child) {
   margin-bottom: 8rem;
 }
+@media (max-width: 75em) {
+  .row:not(:last-child) {
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 75em) {
+  .row {
+    max-width: 50rem;
+  }
+}
 .row::after {
   content: "";
   display: table;
@@ -708,6 +800,17 @@ body {
 }
 .row [class^=col-]:not(:last-child) {
   margin-right: 6rem;
+}
+@media (max-width: 75em) {
+  .row [class^=col-]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 6rem;
+  }
+}
+@media (max-width: 75em) {
+  .row [class^=col-] {
+    width: 100% !important;
+  }
 }
 .row .col-1-of-2 {
   width: calc((100% - 6rem) / 2);
@@ -736,6 +839,12 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+@media (max-width: 37.5em) {
+  .header {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 95%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 95%);
+  }
 }
 .header__logo-box {
   position: absolute;
@@ -921,6 +1030,11 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh;
+}
+@media (max-width: 37.5em) {
+  .section-about {
+    margin-top: -19.5vh;
+  }
 }
 
 .section-features {

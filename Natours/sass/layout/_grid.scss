@@ -4,16 +4,33 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include responsive-manager(tab-horizontal) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include responsive-manager(tab-horizontal) {
+    max-width: 50rem;
   }
 
   @include clearfix; // Clearfix Mixin
 
   // This will select where all class attributes start with `col-`
   [class^="col-"] {
-    float: left;
+    float: left;  
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include responsive-manager(tab-horizontal) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      } 
+    }
+
+    @include responsive-manager(tab-horizontal) {
+      width: 100% !important;
     }
   }
 

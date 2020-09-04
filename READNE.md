@@ -51,3 +51,21 @@
 3. Media Queries: To change styles on certain viewport widths (breakpoints), allowing us to create different version of our website for different widths.
 
 # Natours Responsive Design
+
+- If you want to know the most used resolutions for your breakpoints you should go to: https://gs.statcounter.com/screen-resolution-stats/all/europe
+- em is the best unit option for `media queries`
+
+```
+Resolutions used in Natours Project
+
+0 - 600px : Phone
+
+600 - 900px : Tablet portrait
+
+900 - 1200px : Tablet landscape
+
+[1200 - 1800] is where our normal styles apply
+
+1800px + : Big desktop
+
+```

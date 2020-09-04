@@ -11,9 +11,28 @@
 
 html {
   // This defines what 1rem is
-  font-size: 62.5%; // 10px * 100/ 16 =  0.625
+  font-size: 62.5%; // 10px * 100/16 =  62.5%
+
+  @include responsive-manager(big-desktop) {
+    font-size: 75%; // 1rem = 12px, 12/16 = 75%
+  }
+
+  // width < 1200px
+  @include responsive-manager(tab-horizontal) {
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  // width < 900px
+  @include responsive-manager(tab-vertical) {
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include responsive-manager(tab-vertical) {
+    padding: 0;
+  }
 }
